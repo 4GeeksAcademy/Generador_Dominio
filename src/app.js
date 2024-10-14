@@ -13,7 +13,7 @@ window.onload = function() {
   let sustantivo = ["coche", "sapo", "perro", "gato", "ordenador"];
   let adjetivo = ["feo", "bonito", "gordo", "flaco", "grande", "pequeño"];
   let dominio = [".com", ".es", ".net"];
-  let dominios = "";
+  let combinaciones = "";
   // Bucle externo
   for (let i = 0; i < pronombre.length; i++) {
     // Primer bucle anidado
@@ -23,7 +23,7 @@ window.onload = function() {
         // Tercer bucle anidado
         for (let l = 0; l < dominio.length; l++) {
           // Imprimir la combinación de elementos
-          dominios += `<p>https://www.${pronombre[i] +
+          combinaciones += `<p>https://www.${pronombre[i] +
             sustantivo[j] +
             adjetivo[k] +
             dominio[l]}</p>`;
@@ -31,5 +31,5 @@ window.onload = function() {
       }
     }
   }
-  document.querySelector("#genDominios").innerHTML = dominios;
+  document.querySelector("#genDominios").innerHTML = combinaciones;
 };
